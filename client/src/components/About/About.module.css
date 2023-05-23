@@ -1,0 +1,60 @@
+/* About.module.css */
+
+.divGeneral {
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+.divDetail {
+  margin-top: 30px;
+}
+
+.title {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.text {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.divRedes {
+  display: flex;
+  margin-top: 30px;
+}
+
+.redes {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  margin-right: 20px;
+  transition: transform 0.3s;
+}
+
+.redes:hover {
+  transform: translateY(-3px);
+}
+
+.imagenL,
+.imagenG {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.textRedes {
+  font-size: 16px;
+}
+
+.redes:hover .imagenL,
+.redes:hover .imagenG {
+  filter: grayscale(100%);
+}
+
+.redes:hover .textRedes {
+  color: #ff4081;
+}

@@ -1,0 +1,58 @@
+.divSort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.titles {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.subTitles {
+  color: #fff;
+  margin-right: 15px;
+}
+
+.selects {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.divName,
+.divRating {
+  display: flex;
+  align-items: center;
+}
+
+.divRating {
+  margin-left: 20px;
+}
+
+.divName select,
+.divRating select {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.divName select:hover,
+.divRating select:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.divName select option,
+.divRating select option {
+  background-color: #fff;
+  color: #000;
+}
+
+.divName select option:hover,
+.divRating select option:hover {
+  background-color: #000;
+  color: #fff;
+}
