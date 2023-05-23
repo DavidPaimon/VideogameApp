@@ -18,6 +18,7 @@ const getApiInfById = async function(id) {           //la función getApiInfById
             platforms: urlData.data.platform.map(p => p.platform.name),
             genres: urlData.data.genres.map(g => g.name)
         }
+        console.log(gamesData);
         return gamesData; //devuelve el obj gamesData que contiene los datos del vg recuperados de la API. getApiInfById resuelve la promesa con este obj como resultado
 
     } catch(error){

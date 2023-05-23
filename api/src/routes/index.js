@@ -1,6 +1,6 @@
 const { Router } = require('express');
 //importamos los controladores de rutas
-const { videoGamesRoute, deleteVideoGameRoute } = require('./videogames');
+const { videoGamesRoute } = require('./videogames');
 const { postVideogame, videoGameByIdRoute } = require('./videogame');
 const genresRoute = require('./genres');
 const router = Router();
@@ -8,7 +8,6 @@ const router = Router();
 //GET
 router.get('/videogame/:id', videoGameByIdRoute);      //la ruta se usa para obtener inf sobre un vg mediante su id
 router.get('/videogames', videoGamesRoute);            //la ruta se usa para obtener una lista de los vgs
-router.get('/videogames/:id', deleteVideoGameRoute);   //la ruta se usa para eliminar un vg mediante su id
 router.get('/genres', genresRoute);                    //la ruta se usa para obtener una lista con los generos de los vgs
 
 //POST

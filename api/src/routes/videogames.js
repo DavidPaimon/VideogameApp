@@ -52,7 +52,7 @@ const getDbInf = async function() {
             through: {     //se especifica que no se requieren atributos adicionales en la tabla de unión entre Videogame y Genre al establecer attributes en un arreglo vacío dentro de through
                 attributes: [],
             }
-        }
+    }
     });
 
     dbInf = JSON.parse(JSON.stringify(dbInf)); //se usa JSON.stringify y JSON.parse para convertir el resultado de la consulta dbInf en un objeto JSON y luego en un objeto JavasCript nuevamente. Esto para asegurar que el result sea un objeto mutable y no una instancia del modelo Videogame
@@ -162,24 +162,3 @@ exports.videoGamesRoute = async function (req, res, next) {         //se utiliza
 //En resumen, esta función se utiliza como controlador para una ruta relacionada con los videojuegos
 //Si se proporciona el parámetro name, se realizan búsquedas de videojuegos por nombre y se envían los resultados correspondientes
 //Si no se proporciona el parámetro name, se obtienen todos los videojuegos y se envían como respuesta.
-
-
-//ROUTE PARA ELIMINAR UN VIDEOJUEGO
-
-exports.deleteVideoGameRoute = async function(req, res, next) { //se utiliza como controlador para una ruta especifica que manejará la eliminación de un videojuego
-    const {id} = req.params;                                    //extrae el parámetro id de los parámetros de la solicitud req.params. Este parámetro indica el ID del vg que se va a eliminar
-    
-    Videogame.destroy({                                         //utiliza el modelo Videogame y su método destroy() para eliminar el vg de la DB
-        where: {                                                //se especifica la condición where para buscar el vg con el ID proporcionado y eliminarlo
-            id: id
-        }
-    }).then(function(result) {                                  //el método destroy devuelve una promesa que se resuelve con la cantidad de filas afectadas por la eliminación.
-        if(result) {        //Dentro del then se verifica si result tiene un valor truthy (es decir si se elimino al menos una fila) y se envía una respuesta al cliente con el msj "videogame deleted"
-            res.send("The game has been removed");
-        }
-    })
-}
-
-//En resumen, esta función se utiliza como controlador para eliminar un videojuego en una ruta específica.
-//Recibe el ID del videojuego a eliminar desde los parámetros de la solicitud, utiliza el modelo Videogame y su método destroy() para eliminar el videojuego correspondiente en la base de datos
-//y envía una respuesta al cliente indicando si el videojuego se eliminó correctamente

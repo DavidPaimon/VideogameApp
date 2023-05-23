@@ -56,6 +56,7 @@ export default function Home() {
         setGenrechange("")
         setCurrentPage(1);
         setSource("All");
+        window.location.reload()
     }
 
     function handlerGenres(e) {
@@ -109,7 +110,7 @@ export default function Home() {
                 </div>
 
                 <div className={style.secondColum}>
-                    <h1 className={style.title}>VIDEOGAME INFORMATION</h1>
+                    <h1 className={style.title}>VIDEOGAMES</h1>
                 
                      <Pagination videogamesPerPage={videogamesPerPage} allVideogames={allVideogames.length} pagination={pagination} currentPage={currentPage}/>
                     

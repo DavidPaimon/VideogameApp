@@ -27,6 +27,7 @@ function rootReducer (state = initialState, action) {
                 ...state,
                 videogames: filteredGenre
             }
+            
         
         case 'FILTER_CREATED':
             const allVideogames2 = state.allVideogames;
@@ -61,9 +62,9 @@ function rootReducer (state = initialState, action) {
         case 'ORDER_BY_RATING':
             let orderRatingAsc = state.videogames.slice().sort((a, b) => {
 
-                if(Number(a.rating) > Number(b.rating)) return 1;
+                if(Number(b.rating) > Number(a.rating)) return 1;
 
-                if(Number(b.rating) > Number(a.rating)) return -1;
+                if(Number(a.rating) > Number(b.rating)) return -1;
 
                 return 0;
             })
@@ -84,6 +85,20 @@ function rootReducer (state = initialState, action) {
                 ...state,
                 detail: action.payload
             }
+
+            case 'FILTER_BY_DB':
+            
+            return {
+                ...state,
+                allVideogames: action.payload,
+            };
+
+        case 'FILTER_BY_API':
+            return {
+                ...state,
+                allVideogames: action.payload,
+            };
+
 
 
         default:
