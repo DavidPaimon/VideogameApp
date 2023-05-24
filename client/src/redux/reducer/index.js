@@ -27,17 +27,6 @@ function rootReducer (state = initialState, action) {
                 ...state,
                 videogames: filteredGenre
             }
-            
-        
-        case 'FILTER_CREATED':
-            const allVideogames2 = state.allVideogames;
-            const filteredCreation = action.payload === 'Created' ? allVideogames2.filter(el => el.createdInDb) : allVideogames2.filter(el => !el.createdInDb);
-
-            return {
-                ...state,
-                videogames: action.payload === 'All' ? allVideogames2 : filteredCreation
-            }
-        
         
         case 'ORDER_BY_NAME':
             let orderAsc = state.videogames.slice().sort((a, b) => {

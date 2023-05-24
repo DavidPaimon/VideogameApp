@@ -1,14 +1,14 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getVideogames } from "../../redux/actions";
+import { getVideogames } from "../../redux/actions/index";
 import Nav from "../Nav/Nav";
 import CardVideogame from "../CardVg/CardVg";
 import Pagination from "../Pagination/Pagination";
 import Filters from "../Filters/Filters";
 import OrderBy from "../OrderBy/OrderBy";
-import { filterByGenres, filterByCreated } from "../../redux/actions";
-import { orderByName, orderByRating } from "../../redux/actions";
+import { filterByGenres, filterByCreated } from "../../redux/actions/index";
+import { orderByName, orderByRating } from "../../redux/actions/index";
 import style from "./Home.module.css"
 import imgDefault from "../../images/imgDefault.png"
 

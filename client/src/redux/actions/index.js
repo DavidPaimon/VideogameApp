@@ -106,21 +106,19 @@ export function orderByRating(payload) {
 }
 export const filterByApi = () => {
     return async function (dispatch) {
-        const apiData = await axios.get('http://localhost:3001/videogames')
-        const allVideogames = apiData.data
-        const allVideogamesApi = allVideogames.filter((vg) => typeof  vg.id === 'number')
-        console.log(allVideogamesApi);
-        dispatch({ type: 'FILTER_BY_API', payload: allVideogamesApi })
-
-    }
-}
-
-
-export const filterByDb = () => {
+      const apiData = await axios.get('http://localhost:3001/videogames');
+      const allVideogames = apiData.data;
+      const allVideogamesApi = allVideogames.filter((vg) => typeof vg.id === 'number');
+      dispatch({ type: 'FILTER_BY_API', payload: allVideogamesApi });
+    };
+  };
+  
+  export const filterByDb = () => {
     return async function (dispatch) {
-        const apiData = await axios.get('http://localhost:3001/videogames')
-        const allVideogames = apiData.data
-        const allVideogamesDb = allVideogames.filter((vg) => typeof  vg.id === 'string')
-        dispatch({ type: 'FILTER_BY_DB', payload: allVideogamesDb })
-    }
-}
+      const apiData = await axios.get('http://localhost:3001/videogames');
+      const allVideogames = apiData.data;
+      const allVideogamesDb = allVideogames.filter((vg) => typeof vg.id === 'string');
+      dispatch({ type: 'FILTER_BY_DB', payload: allVideogamesDb });
+    };
+  };
+  
