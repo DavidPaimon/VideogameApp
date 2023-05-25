@@ -33,3 +33,6 @@ module.exports = async function(req, res, next){     //exporta la function middl
     const getDbInfGenres = await Genre.findAll();    //utiliza sequelizepara realizar una consulta enla DB.Genre es un modelo defiinido y findAll un método para buscar los registros de la tabla correspondiente al modelo Genre
     res.send(getDbInfGenres);                        //envia la respuesta HTTP con los registros obtenidos de la DB al cliente que realizó la solicitud
 }
+
+//este código define una ruta en el backend que obtiene los datos de géneros de una API externa
+//los guarda en la base de datos y devuelve los registros de géneros almacenados en la base de datos como respuesta.

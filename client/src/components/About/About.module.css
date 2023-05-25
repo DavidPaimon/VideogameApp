@@ -3,6 +3,7 @@
 .divGeneral {
   background-color: #f7f7f7;
   padding: 20px;
+  min-height: 100vh;
 }
 
 .divDetail {
@@ -24,6 +25,8 @@
 .divRedes {
   display: flex;
   margin-top: 30px;
+  justify-content: center;
+  align-items: center;
 }
 
 .redes {

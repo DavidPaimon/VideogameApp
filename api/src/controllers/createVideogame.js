@@ -32,3 +32,5 @@ const createVideoGameRoute = async (name, description, released, rating, platfor
     return newVideogame                                 //se devuelve el obj newVideogame como resultado de la función
 };
 module.exports = {createVideoGameRoute}
+
+//este código crea un nuevo videojuego en la base de datos, verificando la existencia de valores obligatorios y asociando géneros si se proporcionan.

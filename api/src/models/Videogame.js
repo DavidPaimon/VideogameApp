@@ -38,3 +38,5 @@ module.exports = (sequelize) => {
   { timestamps: false } //indica a Sequelize que no cree automáticamente las marcas de tiempo createdAt y updatedAt en la tabla.
   );
 };
+
+//este código define el modelo de datos para la tabla "videogame" en la base de datos, especificando los campos y sus tipos, así como las propiedades de cada campo.

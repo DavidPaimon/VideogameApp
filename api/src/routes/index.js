@@ -14,3 +14,7 @@ router.get('/genres', genresRoute);                    //la ruta se usa para obt
 router.post('/videogame', postVideogame);              //la ruta se usa para crear un nuevo vg
 
 module.exports = router;
+
+//este código configura las rutas principales del backend utilizando Express. 
+//Define las rutas GET y POST para diferentes URL y asigna los controladores de rutas correspondientes para manejar las solicitudes entrantes. 
+//Cada controlador de ruta se importa desde archivos separados para mantener un código organizado y modular.

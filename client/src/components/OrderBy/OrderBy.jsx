@@ -30,3 +30,5 @@ export default function OrderBy({handlerByName, handlerByRating, namechange, rat
 
 }
 
+//este codigo muestra los controles de ordenamiento para ordenar los videojuegos por nombre o calificación en la página de inicio. 
+//Los eventos de cambio se manejan mediante las funciones handlerByName y handlerByRating, que se pasan como propiedades al componente.

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
-import { postVideogames, getGenres } from "../../redux/actions";
+import { getGenres } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import Nav from "../Nav/Nav";
 import style from "./CreateVg.module.css";
@@ -8,7 +7,6 @@ import axios from "axios";
 
 export default function CreateVideogame() {
   const dispatch = useDispatch();
-  const history = useHistory();
   const genres = useSelector((state) => state.genres);
 
   const platformsApi = [
@@ -26,6 +24,7 @@ export default function CreateVideogame() {
     "Nintendo DSi",
     "iOS",
     "Android",
+    "Windows",
     "macOS",
     "Linux"
   ];
@@ -89,6 +88,41 @@ export default function CreateVideogame() {
       console.error(error);
       alert(error);
     }
+  };
+
+  const validateForm = () => {
+    // Realiza las validaciones aquí antes de enviar el formulario
+    if (!input.name) {
+      alert("Debe ingresar un nombre");
+      return false;
+    }
+
+    if (!input.description) {
+      alert("Debe ingresar una descripción");
+      return false;
+    }
+
+    if (!input.released) {
+      alert("Debe ingresar una fecha de lanzamiento");
+      return false;
+    }
+
+    if (!input.rating) {
+      alert("Debe ingresar una calificación");
+      return false;
+    }
+
+    if (input.platforms.length === 0) {
+      alert("Debe seleccionar al menos una plataforma");
+      return false;
+    }
+
+    if (input.genres.length === 0) {
+      alert("Debe seleccionar al menos un género");
+      return false;
+    }
+
+    return true;
   };
 
   useEffect(() => {
@@ -247,7 +281,7 @@ export default function CreateVideogame() {
             </div>
           </div>
 
-          <button className={style.btn} type="submit">
+          <button className={style.btn} type="submit" onClick={validateForm}>
             Create Videogame
           </button>
         </form>
