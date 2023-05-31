@@ -1,37 +1,30 @@
-import './App.css';
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import axios from "axios"
-import LandingPage from './components/LandingPage/LandingPage';
-import Home from './components/Home/Home';
-import CreateVg from "./components/CreateVg/CreateVg";
-import DetailVg from "./components/DetailVg/DetailVg";
-import About from './components/About/About';
+//Esta es la app es sí misma
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import './App.css'
+import LandingPage from './components/LandingPage';
+import Home from './components/Home';
+import CreateGame from './components/CreateGame';
+import Detail from './components/Detail';
+import GamesNames from './components/GamesNames';
+import About from './components/About';
 
-axios.defaults.baseURL = "https://pi-videogames-main-production-51e1.up.railway.app/";
 
-function App() {
-  
+
+const App = () => {
   return (
-    <div className="App">
-      <Switch>
-        <Route exact path='/'>
-          <LandingPage />
-        </Route>
-        <Route exact path='/home'>
-          <Home />
-        </Route>
-        <Route exact path='/create'>
-          <CreateVg />
-        </Route>
-        <Route exact path='/about'>
-          <About />
-        </Route>
-        <Route exact path='/videogame/:id'>
-          <DetailVg />
-        </Route>
-      </Switch>
-    </div>
+    <Router>
+      <div className='App'>
+        <Switch>
+          <Route exact path= '/' component={LandingPage}/>
+          <Route path= '/home' component={Home}/>
+          <Route path= '/createGame' component={CreateGame}/>
+          <Route path= '/detail/:id' component={Detail}/>
+          <Route path="/name" component={GamesNames}/>
+          <Route path="/about" component={About}/>
+        <h1>GAME APP</h1>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

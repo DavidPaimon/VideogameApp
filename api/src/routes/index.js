@@ -1,20 +1,18 @@
 const { Router } = require('express');
-//importamos los controladores de rutas
-const { videoGamesRoute } = require('./videogames');
-const { postVideogame, videoGameByIdRoute } = require('./videogame');
-const genresRoute = require('./genres');
+const routerGenres = require('../routes/routerGenres')
+const routerGames = require('../routes/routerGames')
+
+// Importar todos los routers;
+
+// Ejemplo: const authRouter = require('./auth.js');
+
+
 const router = Router();
 
-//GET
-router.get('/videogame/:id', videoGameByIdRoute);      //la ruta se usa para obtener inf sobre un vg mediante su id
-router.get('/videogames', videoGamesRoute);            //la ruta se usa para obtener una lista de los vgs
-router.get('/genres', genresRoute);                    //la ruta se usa para obtener una lista con los generos de los vgs
+// Configurar los routers
+// Ejemplo: router.use('/auth', authRouter);
 
-//POST
-router.post('/videogame', postVideogame);              //la ruta se usa para crear un nuevo vg
+router.use('/genres', routerGenres)
+router.use('/videogames', routerGames)
 
 module.exports = router;
-
-//este código configura las rutas principales del backend utilizando Express. 
-//Define las rutas GET y POST para diferentes URL y asigna los controladores de rutas correspondientes para manejar las solicitudes entrantes. 
-//Cada controlador de ruta se importa desde archivos separados para mantener un código organizado y modular.
