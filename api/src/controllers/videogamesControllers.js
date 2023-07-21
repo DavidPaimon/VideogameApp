@@ -15,6 +15,7 @@ const getGamesDb = async () => {
         }
     });
     const data = await response.map(resp => resp.toJSON())
+    console.log(data);
     const videogames = data.map(game => {
         const genres = game.Genre?.map(genre => genre.name)
         return {
