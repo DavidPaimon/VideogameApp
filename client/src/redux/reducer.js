@@ -137,9 +137,7 @@ function rootReducer(state = initialState, action) {
                     videogames: filterMyGames,
                 };
             } else if (payload === "From Api") {
-                filterMyGames = state.getAllVideoGames.filter(
-                    (el) => el.createdInDb !== true
-                );
+                filterMyGames = state.getAllVideoGames;
                 return {
                     ...state,
                     videogames: filterMyGames,

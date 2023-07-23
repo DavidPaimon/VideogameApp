@@ -17,7 +17,6 @@ import Nav from './Nav';
 export default function Home() {
   const dispatch = useDispatch();
   const allVideogames = useSelector((state) => state.videogames);
-  console.log(allVideogames);
   const genres = useSelector((state) => state.genres);
 
   const [currentPage, setCurrentPage] = useState(1);
