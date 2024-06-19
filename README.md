@@ -11,18 +11,6 @@
 
 <br />
 
----
-
-## **⏱ HORARIOS Y FECHAS**
-
-El proyecto individual tiene una duración máxima de tres semanas. Se inicia la primera semana con un Kick-Off, y se agendará una corrección personalizada la última semana.
-
-En el caso de completar todas las tareas antes de dicho lapso se podrá avisar a su instructor para coordinar una fecha de presentación del trabajo (DEMO).
-
-<br />
-
----
-
 ## **⚠️ IMPORTANTE**
 
 Es necesario contar minimamente con la última versión estable de NodeJS y NPM. Asegúrate de contar con ella para poder instalar correctamente las dependecias necesarias para correr el proyecto. Actualmente las versiónes necesarias son:
@@ -37,7 +25,7 @@ node -v
 npm -v
 ```
 
-**ACLARACIÓN:** las dependencias actuales se encuentran en las versiones que venimos trabajando durante el bootcamp.
+**ACLARACIÓN:** dependencias actuales
 
 -  **react**: 17.0.1
 -  **react-dom**: 17.0.1
@@ -45,13 +33,7 @@ npm -v
 -  **redux**: 4.0.5
 -  **react-redux**: 7.2.3
 
-Está permitido, **bajo tu responsabilidad**, actualizar las dependencias a versiones más actuales si lo deseas. Versiones mas actuales podrían presentar configuraciones diferentes respecto a las versiones en las que venimos trabajando durante el bootcamp.
-
-### **⛔️ Está rotundamente prohibido utilizar librerías externas para aplicar estilos a la SPA. Tendrás que utilizar CSS mediante algunas de las opciones vistas en el bootcamp (CSS, Legacy, Inline Styling, CSS Modules o Styled Components).**
-
-<br />
-
----
+Está permitido, **bajo tu responsabilidad**, actualizar las dependencias a versiones más actuales si lo deseas. Versiones mas actuales podrían presentar configuraciones diferentes respecto a las versiones dadas.
 
 ## **📋 PARA COMENZAR...**
 
